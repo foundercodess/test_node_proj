@@ -1,0 +1,17 @@
+schemaVersion: 1.0
+
+component:
+  name: my-service
+  type: service
+  source:
+    path: .  # Path to the source code
+  build:
+    command: npm install  # Modify based on your project's build command
+  run:
+    command: node server.js  # Command to start the service
+
+endpoints:
+  - name: my-service-endpoint
+    service:
+      port: 8080  # Change this if your API runs on a different port
+    type: REST
